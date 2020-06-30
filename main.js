@@ -1733,7 +1733,7 @@ var xl = x.length;
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
-ctx.moveTo(x[0], y[0]);
+ctx.moveTo((x[0] + 1) * 183, (y[0] + 1) * 212);
 for(let i = 0; i < xl; i++) {
   ctx.lineTo((x[i] + 1) * 183, (y[i] + 1) * 212);
 }
