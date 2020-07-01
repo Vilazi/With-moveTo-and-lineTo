@@ -1734,7 +1734,11 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo((x[0] + 1) * 183, (y[0] + 1) * 212);
-for(let i = 0; i < xl; i++) {
+let i = 0;
+function step() {
   ctx.lineTo((x[i] + 1) * 183, (y[i] + 1) * 212);
+  ctx.stroke();
+  i++;
 }
-ctx.stroke();
+let timerId = setInterval(step, 5);
+setTimeout(() => {clearInterval(timerId)}, 4315);
