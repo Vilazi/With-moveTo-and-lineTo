@@ -1736,7 +1736,7 @@ ctx.beginPath();
 ctx.moveTo((x[0] + 1) * 183, (y[0] + 1) * 212);
 let i = 0;
 function step() {
-  if(i < xl - 1) {
+  if(i < xl) {
     ctx.lineTo((x[i] + 1) * 183, (y[i] + 1) * 212);
     ctx.stroke();
   }
