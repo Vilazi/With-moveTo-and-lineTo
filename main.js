@@ -1741,4 +1741,4 @@ function step() {
   i++;
 }
 let timerId = setInterval(step, 5);
-setTimeout(() => {clearInterval(timerId)}, 4315);
+setTimeout(() => {clearInterval(timerId)}, 5000);
