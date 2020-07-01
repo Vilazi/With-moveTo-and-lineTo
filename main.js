@@ -1736,9 +1736,11 @@ ctx.beginPath();
 ctx.moveTo((x[0] + 1) * 183, (y[0] + 1) * 212);
 let i = 0;
 function step() {
-  ctx.lineTo((x[i] + 1) * 183, (y[i] + 1) * 212);
-  ctx.stroke();
+  if(i < xl - 1) {
+    ctx.lineTo((x[i] + 1) * 183, (y[i] + 1) * 212);
+    ctx.stroke();
+  }
   i++;
 }
 let timerId = setInterval(step, 5);
-setTimeout(() => {clearInterval(timerId)}, 5000);
+setTimeout(() => {clearInterval(timerId)}, 6000);
